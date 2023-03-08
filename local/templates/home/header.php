@@ -2,6 +2,10 @@
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
+<?
+
+use Bitrix\Main\Page\Asset;
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,23 +16,21 @@ IncludeTemplateLangFile(__FILE__);
 	<? $APPLICATION->ShowHead(); ?>
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/fonts/icomoon/style.css">
-
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/bootstrap.min.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/magnific-popup.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/jquery-ui.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/owl.carousel.min.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/owl.theme.default.min.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/bootstrap-datepicker.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/mediaelementplayer.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/animate.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/fonts/flaticon/font/flaticon.css">
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/fl-bigmug-line.css">
-
-
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/aos.css">
-
-	<link rel="stylesheet" href="<?= SITE_TEMPLATE_PATH ?>/css/style.css">
+	<?
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/icomoon/style.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap.min.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/magnific-popup.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/jquery-ui.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.carousel.min.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/owl.theme.default.min.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/bootstrap-datepicker.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/mediaelementplayer.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/animate.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/fonts/flaticon/font/flaticon.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/fl-bigmug-line.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/aos.css");
+	Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . "/css/style.css");
+	?>
 
 </head>
 
@@ -114,22 +116,25 @@ IncludeTemplateLangFile(__FILE__);
 						</h1>
 					</div>
 					<div class="col-4 col-md-4 col-lg-8">
-						<? $APPLICATION->IncludeComponent("bitrix:menu", "multilevel_menu", Array(
-	"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
-		"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
-		"DELAY" => "N",	// Откладывать выполнение шаблона меню
-		"MAX_LEVEL" => "3",	// Уровень вложенности меню
-		"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
-		"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
-		"MENU_CACHE_TYPE" => "N",	// Тип кеширования
-		"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
-		"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
-		"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
-		"COMPONENT_TEMPLATE" => "horizontal_multilevel",
-		"MENU_THEME" => "site"
-	),
-	false
-); ?>
+						<? $APPLICATION->IncludeComponent(
+							"bitrix:menu",
+							"multilevel_menu",
+							array(
+								"ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
+								"CHILD_MENU_TYPE" => "left",	// Тип меню для остальных уровней
+								"DELAY" => "N",	// Откладывать выполнение шаблона меню
+								"MAX_LEVEL" => "3",	// Уровень вложенности меню
+								"MENU_CACHE_GET_VARS" => "",	// Значимые переменные запроса
+								"MENU_CACHE_TIME" => "3600",	// Время кеширования (сек.)
+								"MENU_CACHE_TYPE" => "N",	// Тип кеширования
+								"MENU_CACHE_USE_GROUPS" => "Y",	// Учитывать права доступа
+								"ROOT_MENU_TYPE" => "top",	// Тип меню для первого уровня
+								"USE_EXT" => "N",	// Подключать файлы с именами вида .тип_меню.menu_ext.php
+								"COMPONENT_TEMPLATE" => "horizontal_multilevel",
+								"MENU_THEME" => "site"
+							),
+							false
+						); ?>
 					</div>
 
 					<div class="col-4 col-md-4 col-lg-8">
