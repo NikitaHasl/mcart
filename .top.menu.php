@@ -8,20 +8,6 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"Новости", 
-		"/about_the_service/news", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Контакты", 
-		"contacts/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Объявления", 
 		"/announcement/", 
 		Array(), 
@@ -40,14 +26,14 @@ $aMenuLinks = Array(
 		"/sellers_personal_account/", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,7))" 
+		"" 
 	),
 	Array(
 		"Личный кабинет покупателя", 
 		"/buyers_personal_account/", 
 		Array(), 
 		Array(), 
-		"CSite::InGroup(array(1,6))" 
+		"" 
 	)
 );
 ?>
