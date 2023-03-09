@@ -1,5 +1,5 @@
 <?
-$PERM["/"]["8"]="X";
+$PERM["/"]["G8"]="X";
 $PERM["/"]["*"]="R";
 $PERM["index.php"]["G5"]="W";
 $PERM["index.php"]["G8"]="X";

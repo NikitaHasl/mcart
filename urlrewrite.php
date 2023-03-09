@@ -16,7 +16,7 @@ $arUrlRewrite=array (
     'PATH' => '/about the service/vacancies/index.php',
     'SORT' => 100,
   ),
-  11 => 
+  15 => 
   array (
     'CONDITION' => '#^/about_the_service/vacancies/#',
     'RULE' => '',
@@ -32,7 +32,7 @@ $arUrlRewrite=array (
     'PATH' => '/about the service/news/index.php',
     'SORT' => 100,
   ),
-  10 => 
+  16 => 
   array (
     'CONDITION' => '#^/about_the_service/news/#',
     'RULE' => '',
@@ -40,7 +40,7 @@ $arUrlRewrite=array (
     'PATH' => '/about_the_service/news/index.php',
     'SORT' => 100,
   ),
-  12 => 
+  14 => 
   array (
     'CONDITION' => '#^/announcement/#',
     'RULE' => '',

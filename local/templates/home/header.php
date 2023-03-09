@@ -142,3 +142,15 @@ use Bitrix\Main\Page\Asset;
 				</div>
 			</div>
 		</div>
+	</div>
+	<? $APPLICATION->IncludeComponent(
+	"bitrix:breadcrumb", 
+	"breadcrumbs", 
+	array(
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0",
+		"COMPONENT_TEMPLATE" => "breadcrumbs"
+	),
+	false
+); ?>
