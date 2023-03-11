@@ -117,7 +117,15 @@ $this->setFrameMode(true);
 			<div class="row mb-5">
 				<div class="col-12">
 					<div class="site-section-title">
-						<h2><?= GetMessage("ANNOUNCEMENTS_PAGE.TITLE") ?></h2>
+						<?
+						$url = explode('?', $_SERVER['REQUEST_URI'])[0];
+
+						if ($url == "/announcement/") :
+						?>
+							<h2><?= GetMessage("ANNOUNCEMENTS_PAGE.TITLE") ?></h2>
+						<? else : ?>
+							<h2><?= GetMessage("MY_ANNOUNCEMENTS_PAGE.TITLE") ?></h2>
+						<? endif; ?>
 					</div>
 				</div>
 			</div>
