@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Вакансии");
 ?><?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
-	".default", 
+	"mcart", 
 	array(
 		"ADD_ELEMENT_CHAIN" => "N",
 		"ADD_SECTIONS_CHAIN" => "N",
@@ -83,7 +83,7 @@ $APPLICATION->SetTitle("Вакансии");
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "mcart",
 		"SEF_URL_TEMPLATES" => array(
 			"news" => "",
 			"section" => "",

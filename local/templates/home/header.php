@@ -35,7 +35,10 @@ use Bitrix\Main\Page\Asset;
 </head>
 
 <body>
-	<? $APPLICATION->ShowPanel(); ?>
+	<div id="panel">
+		<? $APPLICATION->ShowPanel(); ?>
+	</div>
+
 	<div class="site-loader"></div>
 
 	<div class="site-wrap">
@@ -54,30 +57,30 @@ use Bitrix\Main\Page\Asset;
 				<div class="row align-items-center">
 					<div class="col-6 col-md-6">
 						<p class="mb-0">
-							<a href="#" class="mr-3"><span class="text-black fl-bigmug-line-phone351"></span> <span class="d-none d-md-inline-block ml-2">
-									<? $APPLICATION->IncludeComponent(
-										"bitrix:main.include",
-										"",
-										array(
-											"AREA_FILE_SHOW" => "file",
-											"AREA_FILE_SUFFIX" => "inc",
-											"EDIT_TEMPLATE" => "",
-											"PATH" => "/include/home/phone.php"
-										)
-									); ?>
-								</span></a>
-							<a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span class="d-none d-md-inline-block ml-2">
-									<? $APPLICATION->IncludeComponent(
-										"bitrix:main.include",
-										"",
-										array(
-											"AREA_FILE_SHOW" => "file",
-											"AREA_FILE_SUFFIX" => "inc",
-											"EDIT_TEMPLATE" => "",
-											"PATH" => "/include/home/mail.php"
-										)
-									); ?>
-								</span></a>
+							<a href="#" class="mr-3">
+								<? $APPLICATION->IncludeComponent(
+									"bitrix:main.include",
+									"",
+									array(
+										"AREA_FILE_SHOW" => "file",
+										"AREA_FILE_SUFFIX" => "inc",
+										"EDIT_TEMPLATE" => "",
+										"PATH" => "/include/home/phone.php"
+									)
+								); ?>
+							</a>
+							<a href="#">
+								<? $APPLICATION->IncludeComponent(
+									"bitrix:main.include",
+									"",
+									array(
+										"AREA_FILE_SHOW" => "file",
+										"AREA_FILE_SUFFIX" => "inc",
+										"EDIT_TEMPLATE" => "",
+										"PATH" => "/include/home/mail.php"
+									)
+								); ?>
+							</a>
 						</p>
 					</div>
 					<div class="col-6 col-md-6 text-right">
@@ -144,13 +147,13 @@ use Bitrix\Main\Page\Asset;
 		</div>
 	</div>
 	<? $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"breadcrumbs", 
-	array(
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0",
-		"COMPONENT_TEMPLATE" => "breadcrumbs"
-	),
-	false
-); ?>
+		"bitrix:breadcrumb",
+		"breadcrumbs",
+		array(
+			"PATH" => "",
+			"SITE_ID" => "s1",
+			"START_FROM" => "0",
+			"COMPONENT_TEMPLATE" => "breadcrumbs"
+		),
+		false
+	); ?>
